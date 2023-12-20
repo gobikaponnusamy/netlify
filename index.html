@@ -4,43 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Actions Job Information</title>
+    <style>
+        /* Add your styles here */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 100% of the viewport height */
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
   <div class="job-container">
-    <h2>Job Name: PR-Verification-Pre-Req</h2>
+    <h2>*****Job Name: PR-Verification-Pre-Req has executed successfully*****</h2>
+  <img src="tick.gif" alt="Computer man" style="width:800px;height:500px; ">
 
-    <div class="condition">
-      <h3>Condition:</h3>
-      <p>This job runs only if the following conditions are met:</p>
-      <ul>
-        <li>The state of the PR review is 'APPROVED'.</li>
-        <li>The pull request is not yet merged (<code>github.event.pull_request.merged == false</code>).</li>
-      </ul>
-    </div>
-
-    <div class="runs-on">
-      <h3>Runs on:</h3>
-      <p><code>api_ct_runner_build</code></p>
-    </div>
-
-    <div class="steps">
-      <h3>Steps:</h3>
-      <ol>
-        <li>
-          <strong>Checkout Action:</strong> Uses the <code>actions/checkout</code> action to clone the repository at the latest commit.
-        </li>
-        <li>
-          <strong>PR Verification Steps:</strong>
-          <ul>
-            <li><strong>ID:</strong> Action1</li>
-            <li><strong>Run:</strong> Executes a script that echoes "Any pre-requisites if any."</li>
-          </ul>
-        </li>
-      </ol>
-      <p>This job is designed to execute when a pull request review is approved, and the pull request is not yet merged. It runs on a custom runner named api_ct_runner_build and performs basic steps such as checking out the repository and executing a script related to PR verification steps. You can customize the script inside the run block to include any specific pre-requisites or verification steps you require for your pull requests.</p>
-    </div>
-  </div>
 
 </body>
 </html>
